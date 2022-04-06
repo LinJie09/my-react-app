@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function LoginForm({ Login, error }) {
+function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
 
   const sumbitHandler = (e) => {
@@ -51,3 +51,5 @@ export default function LoginForm({ Login, error }) {
     </form>
   );
 }
+
+export default LoginForm;

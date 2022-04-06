@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,12 +12,11 @@ input,button{
   outline: none;
 }
 
-.App{
+.LoginForm{
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #53565A;
 }
 form{
   display: block;
@@ -100,7 +99,6 @@ form .form-inner input[type='submit']:hover,
 .welcome button:hover{
   background-position: 100% 0%;
 }
-
 
 .welcome{
   width: 100%;

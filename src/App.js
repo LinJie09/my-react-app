@@ -1,83 +1,23 @@
-//import './App.css';
-//import Slider from './Slider/Slider';
-import { useState } from 'react'
-import LoginForm from './LoginForm';
+// import './App.css';
+import { render } from "react-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import SliderWork from "./Slider/SliderWork";
+import LoginWork from "./Login/LoginWork";
+import TodoWork from "./TodoList/TodoWork";
+import CalcWork from "./Calc/CalcWork";
 
+// import ApiTest from "./Api/apiTest";
 
 function App() {
-  const adminUser = {
-    email: 'admin@admin.com',
-    password: 'admin123'
-  }
-
-  const [user, setUser] = useState({ name: '', email: '' });
-  const [error, setError] = useState('');
-
-  const Login = details => {
-    console.log(details);
-
-    if(details.email ===adminUser.email && details.password ===adminUser.password){
-      console.log('Logged in');
-      setUser({
-        name: details.name,
-        email: details.email
-      });
-    }else{
-      console.log('Details do not match!');
-      setError('Details do not match!');
-    }
-  }
-
-  const Logout = () => {
-    setUser({name: '', email: '' });
-  }
-
-  return (
-    <div className='App'>
-      {(user.email != '' )? (
-        <div className='welcome'>
-          <h2>Welcome,<span>{user.name}</span></h2>
-          <button onClick={Logout}>Logout</button>
-        </div>
-      ) : ( 
-        <LoginForm Login ={Login} error={error} />
-        )}
-    </div>
+  render(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/App" element={<SliderWork />}></Route>
+        <Route path="/App" element={<LoginWork />}></Route>
+        <Route path="/App" element={<TodoWork />}></Route>
+        <Route path="/App" element={<CalcWork />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
-  // return(
-  //   <>
-  //     <Slider></Slider>
-  //   </>
-  // );
-
-  // const [number, setNumber] = useState(0)
-  // return (
-  //   <div className='container'>
-  //     <body>
-  //       <h1>Counter</h1>
-  //       <span className={`value ${number > 0 ? 'text-green' : 'text-red'} ${number === 0 && 'text-black'}`} id='value'>{number}</span>
-  //       <div className='btn-container'>
-
-  //         <button className='btn increase'
-  //           onClick={() => {
-  //             setNumber(number - 1)
-  //           }}>Dncrease
-  //         </button>
-
-  //         <button className='btn reset'
-  //           onClick={() => {
-  //             setNumber(0)
-  //           }}>Reset
-  //         </button>
-
-  //         <button className='btn increase'
-  //           onClick={() => {
-  //             setNumber(number + 1)
-  //           }}>Increase
-  //         </button>
-  //       </div>
-  //     </body>
-  //   </div>
-  // );
 }
 export default App;
