@@ -2,9 +2,9 @@ import React from "react";
 import "./Slider.css";
 import leftArrow from "./icons/left-arrow.svg";
 import rightArrow from "./icons/right-arrow.svg";
+import PropTypes from "prop-types";
 
 export default function BtnSlider({ direction, moveSlide }) {
-  console.log(direction, moveSlide);
   return (
     <button
       onClick={moveSlide}
@@ -14,3 +14,7 @@ export default function BtnSlider({ direction, moveSlide }) {
     </button>
   );
 }
+BtnSlider.propTypes = {
+  direction: PropTypes.string,
+  moveSlide: PropTypes.func, // Henry example
+};

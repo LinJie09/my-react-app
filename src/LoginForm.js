@@ -13,7 +13,7 @@ export default function LoginForm({ Login, error }) {
     <form onSubmit={sumbitHandler}>
       <div className="form-inner">
         <h2>Login</h2>
-        {error != "" ? <div className="error">{error}</div> : ""}
+        {error !== "" ? <div className="error">{error}</div> : ""}
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
