@@ -1,8 +1,10 @@
 import Slider from "./Slider";
 
 function SliderWork() {
-  <>
-    <Slider />
-  </>;
+  return (
+    <>
+      <Slider />
+    </>
+  );
 }
-export default SliderWork();
+export default SliderWork;
