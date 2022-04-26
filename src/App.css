@@ -321,7 +321,7 @@ select {
 } */ 
 
 
-.app{
+/*.app{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,13 +337,48 @@ select {
 .row{
   display: flex;
   width: 100%;
+}*/
+
+
+
+body{
+  margin: 0;
+  height: 100vh;
+  /*background-image: url('https://i0.wp.com/pic1.win4000.com/wallpaper/c/54813fb369108.jpg');*/
+  
+}
+.picture-append-alreadyClick{
+  height: 0rem;
+  width: 0rem;
+}
+.picture-append{ 
+  cursor: pointer;
+  border: 2px solid #000;
+  height: 15rem;
+  width: 15rem;
+}
+.container-link{
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+  height: 300px;
 }
 
-
-
-
-
-
-
+.container-btn{
+  display: flex;
+}
+.btn-in-chose{
+  display: flex;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.home{
+  display: flex;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
 

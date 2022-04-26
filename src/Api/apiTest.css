@@ -1,15 +1,23 @@
-.file-picture {
+.file-picture{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border: 2px dashed #0000;
-    border-radius: 2px;
+    min-height: 100vh;
+}
+
+.put-in-pc {
+    align-items: center;
+    border: 2px dashed #888;
     color: #767676;
     display: flex;
     flex-direction: column;
-    padding: 24px 16px;
+    padding: 24px 160px;
 }
-
-.upload {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.text-container1{
+    color: #000;
+    font-weight: 700;
+    font-size: 25px;
+}
+span{
+    color: #00ff;
 }

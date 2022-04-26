@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./CalcWork.css";
 import { Button } from "./Button";
 import { Input } from "./Input";
 import { ClearButton } from "./ClearButton";
@@ -23,7 +24,7 @@ class calcWork extends Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="calc-app">
         <div className="calc-wrapper">
           <Input input={this.state.input}></Input>
           <div className="row">
