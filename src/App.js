@@ -1,11 +1,13 @@
 import "./App.css";
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
+
 import SliderWork from "./Slider/SliderWork";
 import LoginWork from "./Login/LoginWork";
 import TodoWork from "./TodoList/TodoWork";
 import CalcWork from "./Calc/CalcWork";
 import ApiTest from "./Api/ApiTest";
+import SignUpApi from "./SignUpApi/SignUpApi";
 
 import apiPicture from "./picture/apiPicture.jpg";
 import sliderPc from "./picture/sliderPc.jpg";
@@ -58,6 +60,7 @@ function App() {
           <Route path="/CalcWork" element={<CalcWork />} />
           <Route path="/SliderWork" element={<SliderWork />} />
           <Route path="/LoginWork" element={<LoginWork />} />
+          <Route path="/SignUpApi" element={<SignUpApi />} />
         </Routes>
       </div>
     </main>
