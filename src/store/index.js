@@ -1,11 +1,11 @@
-import { creatContext, useContext } from "react";
-import SignContext from "./SignStore";
+import { createContext, useContext } from "react";
+import SignUpContext from "./SignStore";
 
-export const RootStoreContext = creatContext();
+export const RootStoreContext = createContext();
 const RootStore = ({ children }) => {
-  const SignStore = SignContext();
+  const SignUpStore = SignUpContext();
   return (
-    <RootStoreContext.Provider value={{ SignStore }}>
+    <RootStoreContext.Provider value={{ SignUpStore }}>
       {children}
     </RootStoreContext.Provider>
   );

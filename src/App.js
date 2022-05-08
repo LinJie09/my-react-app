@@ -13,7 +13,7 @@ import apiPicture from "./picture/apiPicture.jpg";
 import sliderPc from "./picture/sliderPc.jpg";
 import calcPc from "./picture/calc.jpg";
 import loginPc from "./picture/loginPc.jpg";
-
+import ContextWork from "./Context/ContextWork";
 import Item from "./Item";
 
 function App() {
@@ -61,6 +61,7 @@ function App() {
           <Route path="/SliderWork" element={<SliderWork />} />
           <Route path="/LoginWork" element={<LoginWork />} />
           <Route path="/SignUpApi" element={<SignUpApi />} />
+          <Route path="/ContextWork" element={<ContextWork />} />
         </Routes>
       </div>
     </main>
