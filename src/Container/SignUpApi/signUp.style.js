@@ -20,6 +20,14 @@ export const SingUp = styled.div`
 export const SignBtn = styled.button`
   appearance: none;
   background: none;
-  border: none;
+  border: 2px solid #000;
   outline: none;
+`;
+
+export const SignUpMainDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
 `;

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import "./CalcWork.css";
 import { Button } from "./Button";
 import { Input } from "./Input";
 import { ClearButton } from "./ClearButton";
 import * as math from "mathjs";
+import "./CalcWork.css";
 
-class calcWork extends Component {
+class Calculator extends Component {
   constructor(props) {
     super(props);
 
@@ -24,15 +24,9 @@ class calcWork extends Component {
 
   render() {
     return (
-      <div className="calc-app">
+      <div className="app">
         <div className="calc-wrapper">
           <Input input={this.state.input}></Input>
-          <div className="row">
-            <Button handleClick={this.addToInput}>7</Button>
-            <Button handleClick={this.addToInput}>8</Button>
-            <Button handleClick={this.addToInput}>9</Button>
-            <Button handleClick={this.addToInput}>/</Button>
-          </div>
           <div className="row">
             <Button handleClick={this.addToInput}>7</Button>
             <Button handleClick={this.addToInput}>8</Button>
@@ -43,7 +37,7 @@ class calcWork extends Component {
             <Button handleClick={this.addToInput}>4</Button>
             <Button handleClick={this.addToInput}>5</Button>
             <Button handleClick={this.addToInput}>6</Button>
-            <Button handleClick={this.addToInput}>X</Button>
+            <Button handleClick={this.addToInput}>*</Button>
           </div>
           <div className="row">
             <Button handleClick={this.addToInput}>1</Button>
@@ -67,4 +61,4 @@ class calcWork extends Component {
     );
   }
 }
-export default calcWork;
+export default Calculator;

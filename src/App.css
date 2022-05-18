@@ -359,7 +359,6 @@ body{
 }
 .container-link{
   display: flex;
-  /*flex-direction: column;*/
   justify-content: center;
   align-items: center;
   height: 300px;
@@ -367,18 +366,37 @@ body{
 
 .container-btn{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn-in-chose{
-  display: flex;
-  background-color: #fff;
-  border-radius: 20px;
-  cursor: pointer;
+    display: flex;
+    padding: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: Tahoma,Geneva,Verdana,sans-serif;
+    cursor: pointer;
+    background-color: transparent;
 }
 .home{
-  display: flex;
-  background-color: #fff;
-  border-radius: 20px;
-  cursor: pointer;
+    background: transparent;
+    text-transform: uppercase;
+    font-family: Arial;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 11px;
+    letter-spacing: 5px;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 

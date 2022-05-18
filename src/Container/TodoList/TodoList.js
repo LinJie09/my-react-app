@@ -1,10 +1,10 @@
 import React from "react";
 import Todo from "./Todo";
-
+import { TodoContainer, Todolist } from "./todo.style";
 const TodoList = ({ todos, setTodos, filteredTodos }) => {
   return (
-    <div className="todo-container">
-      <ul className="todo-list">
+    <TodoContainer>
+      <Todolist>
         {filteredTodos.map((todo) => (
           <Todo
             todo={todo}
@@ -14,8 +14,8 @@ const TodoList = ({ todos, setTodos, filteredTodos }) => {
             key={todo.id}
           />
         ))}
-      </ul>
-    </div>
+      </Todolist>
+    </TodoContainer>
   );
 };
 

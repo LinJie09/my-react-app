@@ -2,18 +2,18 @@ import "./App.css";
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
-import SliderWork from "./Slider/SliderWork";
-import LoginWork from "./Login/LoginWork";
-import TodoWork from "./TodoList/TodoWork";
-import CalcWork from "./Calc/CalcWork";
-import ApiTest from "./Api/ApiTest";
-import SignUpApi from "./SignUpApi/SignUpApi";
+import SliderWork from "./Container/Slider/SliderWork";
+import LoginWork from "./Container/Login/LoginWork";
+import TodoWork from "./Container/TodoList/TodoWork";
+import CalcWork from "./Container/Calc/CalcWork";
+import ApiTest from "./Container/Api/ApiTest";
+import SignUpApi from "./Container/SignUpApi/SignUpApi";
 
-import apiPicture from "./picture/apiPicture.jpg";
-import sliderPc from "./picture/sliderPc.jpg";
-import calcPc from "./picture/calc.jpg";
-import loginPc from "./picture/loginPc.jpg";
-import ContextWork from "./Context/ContextWork";
+import apiPicture from "./Container/picture/apiPicture.jpg";
+import sliderPc from "./Container/picture/sliderPc.jpg";
+import calcPc from "./Container/picture/calc.jpg";
+import loginPc from "./Container/picture/loginPc.jpg";
+import todoWork from "./Container/picture/TodoPicture.jpg";
 import Item from "./Item";
 
 function App() {
@@ -51,6 +51,9 @@ function App() {
           <Link to="/LoginWork">
             <Item test={test} click={click} value={loginPc} />
           </Link>
+          <Link to="/TodoWork">
+            <Item test={test} click={click} value={todoWork} />
+          </Link>
         </div>
 
         <Routes>
@@ -61,7 +64,6 @@ function App() {
           <Route path="/SliderWork" element={<SliderWork />} />
           <Route path="/LoginWork" element={<LoginWork />} />
           <Route path="/SignUpApi" element={<SignUpApi />} />
-          <Route path="/ContextWork" element={<ContextWork />} />
         </Routes>
       </div>
     </main>

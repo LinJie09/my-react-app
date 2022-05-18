@@ -1,6 +1,6 @@
-import { createContext, useContext, useState } from "react";
-import SignUpContext from "../store/SignStore";
-import { ButtonStyle } from "./index.style";
+/* import { createContext, useContext, useState } from "react";
+import SignUpContext from "../SignUpApi/Store/SignStore";
+import { ButtonStyle } from "../store/index.style";
 
 export const ThemeContext = createContext();
 export const DarkCotext = createContext();
@@ -24,4 +24,4 @@ const ContextWork = ({ children }) => {
 };
 
 export const useStore = () => useContext(ThemeContext);
-export default ContextWork;
+export default ContextWork; */

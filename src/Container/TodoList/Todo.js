@@ -23,10 +23,10 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         {text}
       </li>
       <button onClick={completeHandler} className="complete-btn">
-        <i className="fas fas-check"></i>
+        <i className="fas fa-check"></i>
       </button>
       <button onClick={deleteHandler} className="trash-btn">
-        <i className="fas fas-trash"></i>
+        <i className="fas fa-trash"></i>
       </button>
     </div>
   );
