@@ -101,7 +101,7 @@ export const FormSelect = styled.select`
   position: relative;
   overflow: hidden;
   :hover{
-    content: "\25BC";
+    //content: "\25BC";
     position: absolute;
     top: 0;
     right: 0;

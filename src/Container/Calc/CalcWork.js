@@ -1,64 +1,166 @@
-import React, { Component } from "react";
-import { Button } from "./Button";
-import { Input } from "./Input";
-import { ClearButton } from "./ClearButton";
+import React, { useState } from "react";
 import * as math from "mathjs";
-import "./CalcWork.css";
+import { deal } from "./Inputs";
+import { btn } from "./Button";
+import "./CalcStyle.css";
+/* import {
+  CalcContainer,
+  CalcWrapper,
+  Row,
+  InputSpace,
+  BtnClick,
+} from "./Calc.style"; */
 
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
+export default function CalcWork() {
+  const [space, setSpace] = useState("");
+  const clear = () => {
+    setSpace("");
+  };
 
-    this.state = {
-      input: "",
-    };
-  }
-
-  addToInput(val) {
-    this.setState({ input: this.state.input + val });
-  }
-
-  handleEqual() {
-    this.setState({ input: math.evaluate(this.state.input) });
-  }
-
-  render() {
-    return (
-      <div className="app">
-        <div className="calc-wrapper">
-          <Input input={this.state.input}></Input>
-          <div className="row">
-            <Button handleClick={this.addToInput}>7</Button>
-            <Button handleClick={this.addToInput}>8</Button>
-            <Button handleClick={this.addToInput}>9</Button>
-            <Button handleClick={this.addToInput}>/</Button>
-          </div>
-          <div className="row">
-            <Button handleClick={this.addToInput}>4</Button>
-            <Button handleClick={this.addToInput}>5</Button>
-            <Button handleClick={this.addToInput}>6</Button>
-            <Button handleClick={this.addToInput}>*</Button>
-          </div>
-          <div className="row">
-            <Button handleClick={this.addToInput}>1</Button>
-            <Button handleClick={this.addToInput}>2</Button>
-            <Button handleClick={this.addToInput}>3</Button>
-            <Button handleClick={this.addToInput}>+</Button>
-          </div>
-          <div className="row">
-            <Button handleClick={this.addToInput}>.</Button>
-            <Button handleClick={this.addToInput}>0</Button>
-            <Button handleClick={() => this.handleEqual()}>=</Button>
-            <Button handleClick={this.addToInput}>-</Button>
-          </div>
-          <div className="row">
-            <ClearButton handleClear={() => this.setState({ input: "" })}>
-              Clear
-            </ClearButton>
-          </div>
+  const equal = () => {
+    setSpace(math.evaluate(space));
+  };
+  return (
+    <div className="main-in-counterbymyself">
+      <div className="sec-in-counterbymyself">
+        <div className="third-in-counterbymyself">
+          <div className="input-space">{space}</div>
+        </div>
+        <div className="btn-in-counterbymyself">
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("7", setSpace, space);
+            }}
+          >
+            7
+          </button>
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("8", setSpace, space);
+            }}
+          >
+            8
+          </button>
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("9", setSpace, space);
+            }}
+          >
+            9
+          </button>
+          <button
+            className="button-in-mainfunc notNumber"
+            onClick={() => {
+              deal("/", space, setSpace);
+            }}
+          >
+            /
+          </button>
+          <button className="button-in-mainfunc" onClick={clear}>
+            clear
+          </button>
+        </div>
+        <div className="btn-in-counterbymyself">
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("4", setSpace, space);
+            }}
+          >
+            4
+          </button>
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("5", setSpace, space);
+            }}
+          >
+            5
+          </button>
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("6", setSpace, space);
+            }}
+          >
+            6
+          </button>
+          <button
+            className="button-in-mainfunc notNumber"
+            onClick={() => {
+              deal("*", space, setSpace);
+            }}
+          >
+            *
+          </button>
+        </div>
+        <div className="btn-in-counterbymyself">
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("1", setSpace, space);
+            }}
+          >
+            1
+          </button>
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("2", setSpace, space);
+            }}
+          >
+            2
+          </button>
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("3", setSpace, space);
+            }}
+          >
+            3
+          </button>
+          <button
+            className="button-in-mainfunc notNumber"
+            onClick={() => {
+              deal("+", space, setSpace);
+            }}
+          >
+            +
+          </button>
+        </div>
+        <div className="btn-in-counterbymyself">
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              deal(".", space, setSpace);
+            }}
+          >
+            .
+          </button>
+          <button
+            className="button-in-mainfunc"
+            onClick={() => {
+              btn("0", setSpace, space);
+            }}
+          >
+            0
+          </button>
+          <button className="button-in-mainfunc" onClick={equal}>
+            =
+          </button>
+          <button
+            className="button-in-mainfunc notNumber"
+            onClick={() => {
+              deal("-", space, setSpace);
+            }}
+          >
+            -
+          </button>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-export default Calculator;

@@ -1,20 +1,7 @@
-import React from "react";
-import "./CalcWork.css";
-import propTypes from "prop-types";
-
-const isOperator = (val) => {
-  return !isNaN(val) || val === "." || val === "=";
+export const btn = (value, space, setSpace) => {
+  if (space === "") {
+    setSpace(value);
+  } else {
+    setSpace(space + value);
+  }
 };
-isOperator.propTypes = {
-  children: propTypes.func,
-};
-export const Button = (props) => (
-  <div
-    className={`button-wrapper ${
-      isOperator(props.children) ? null : "operator"
-    }`}
-    onClick={() => props.handleClick(props.children)}
-  >
-    {props.children}
-  </div>
-);
