@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LoginForm from "./LoginForm";
-import "./Login.css";
+import { Loginwork, Welcome } from "./Login.style";
 
 function LoginWork() {
   const adminUser = {
@@ -33,18 +33,20 @@ function LoginWork() {
   };
 
   return (
-    <div className="LoginWork">
+    <Loginwork>
       {user.email !== "" ? (
-        <div className="welcome">
-          <h2>
-            Welcome,<span>{user.name}</span>
-          </h2>
-          <button onClick={Logout}>Logout</button>
-        </div>
+        <Welcome>
+          <div className="welcome">
+            <h2>
+              Welcome,<span>{user.name}</span>
+            </h2>
+            <button onClick={Logout}>Logout</button>
+          </div>
+        </Welcome>
       ) : (
         <LoginForm Login={Login} error={error} />
       )}
-    </div>
+    </Loginwork>
   );
 }
 export default LoginWork;

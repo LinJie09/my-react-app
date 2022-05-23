@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import "./Login.css";
-
+import {
+  Forminner,
+  Formgroup,
+  Formword,
+  Forminput,
+  ForminnerWord,
+  LoginBtn,
+} from "./Login.style";
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
 
@@ -12,32 +18,32 @@ function LoginForm({ Login, error }) {
 
   return (
     <form onSubmit={sumbitHandler}>
-      <div className="form-inner">
-        <h2>Login</h2>
+      <Forminner>
+        <ForminnerWord>Login</ForminnerWord>
         {error !== "" ? <div className="error">{error}</div> : ""}
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
+        <Formgroup>
+          <Formword htmlFor="name">Name:</Formword>
+          <Forminput
             type="text"
             name="name"
             id="name"
             onChange={(e) => setDetails({ ...details, name: e.target.value })}
             value={details.name}
           />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
+        </Formgroup>
+        <Formgroup>
+          <Formword htmlFor="email">Email:</Formword>
+          <Forminput
             type="email"
             name="email"
             id="email"
             onChange={(e) => setDetails({ ...details, email: e.target.value })}
             value={details.email}
           />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
+        </Formgroup>
+        <Formgroup>
+          <Formword htmlFor="password">password:</Formword>
+          <Forminput
             type="password"
             name="password"
             id="password"
@@ -46,9 +52,9 @@ function LoginForm({ Login, error }) {
             }
             value={details.password}
           />
-        </div>
-        <input type="submit" value="LOGIN" />
-      </div>
+        </Formgroup>
+        <LoginBtn type="submit" value="LOGIN" />
+      </Forminner>
     </form>
   );
 }

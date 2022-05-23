@@ -25,7 +25,6 @@ function App() {
     if (click % 2 !== 0) {
       setBtn("Show");
     }
-    console.log(click);
   };
   return (
     <main>

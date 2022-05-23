@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import TodoList from "./TodoList";
 import Form from "./Form";
 import "./todo.css";
+import { TodoHeader } from "./todo.style";
 function TodoWork() {
   // todoList
   // State suff
@@ -46,9 +47,9 @@ function TodoWork() {
   };
   return (
     <div className="todoWork">
-      <header>
+      <TodoHeader>
         <h1>My Todo List</h1>
-      </header>
+      </TodoHeader>
       <Form
         todos={todos}
         setTodos={setTodos}

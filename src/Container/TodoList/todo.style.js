@@ -21,7 +21,7 @@ export const Todolist = styled.ul`
   list-style: none;
 `;
 // todo_css
-export const Todo = styled.div`
+export const ToDo = styled.div`
   margin: 0.5rem;
   background: white;
   font-size: 1.5rem;
@@ -36,6 +36,10 @@ export const TodoItem = styled.li`
   padding: 0rem 0.5rem;
 `;
 
+export const TodoLi = styled.li`
+  flex: 1;
+`;
+
 export const CompleteBtn = styled.button`
   background: #ff6f47;
   color: white;
@@ -44,10 +48,6 @@ export const CompleteBtn = styled.button`
   cursor: pointer;
   font-size: 1rem;
   background: rgb(11, 212, 162);
-`;
-
-export const FasCheck = styled.i`
-  pointer-events: none;
 `;
 
 export const TrashBtn = styled.button`
@@ -59,15 +59,12 @@ export const TrashBtn = styled.button`
   font-size: 1rem;
 `;
 
-export const FasTrash = styled.i`
-  pointer-events: none;
-`;
 // form_css
 export const FilterTodo = styled.select`
   padding: 1rem;
 `;
 
-export const Form = styled.form`
+export const Formform = styled.form`
   min-height: 20vh;
   display: flex;
   justify-content: center;
@@ -96,12 +93,12 @@ export const FormButton = styled.button`
   }
 `;
 
-export const FormSelect = styled.select`
+export const FormSelect = styled.div`
   margin: 1rem;
   position: relative;
   overflow: hidden;
-  :hover{
-    //content: "\25BC";
+  ::after {
+    content: "\25BC";
     position: absolute;
     top: 0;
     right: 0;
@@ -109,5 +106,20 @@ export const FormSelect = styled.select`
     background: #ff6f47;
     cursor: pointer;
     pointer-events: none;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none; 
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+    color: #ff6f47;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+    padding: 1rem;
   }
 `;

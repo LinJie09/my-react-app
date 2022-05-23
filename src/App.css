@@ -357,6 +357,9 @@ body{
   height: 15rem;
   width: 15rem;
 }
+/*.container{
+  display: flex;
+}*/
 .container-link{
   display: flex;
   justify-content: center;

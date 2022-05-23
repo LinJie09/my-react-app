@@ -1,5 +1,5 @@
 import React from "react";
-
+import { ToDo, CompleteBtn, TrashBtn, TodoLi } from "./todo.style";
 const Todo = ({ text, todo, todos, setTodos }) => {
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
@@ -18,17 +18,17 @@ const Todo = ({ text, todo, todos, setTodos }) => {
     );
   };
   return (
-    <div className="todo">
-      <li className={`todo-item ${todo.completed ? "completed" : ""} `}>
+    <ToDo>
+      <TodoLi className={`todo-item ${todo.completed ? "completed" : ""} `}>
         {text}
-      </li>
-      <button onClick={completeHandler} className="complete-btn">
+      </TodoLi>
+      <CompleteBtn onClick={completeHandler}>
         <i className="fas fa-check"></i>
-      </button>
-      <button onClick={deleteHandler} className="trash-btn">
+      </CompleteBtn>
+      <TrashBtn onClick={deleteHandler}>
         <i className="fas fa-trash"></i>
-      </button>
-    </div>
+      </TrashBtn>
+    </ToDo>
   );
 };
 
